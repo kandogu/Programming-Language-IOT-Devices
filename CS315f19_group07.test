@@ -1,0 +1,262 @@
+void welcomeFunction(){
+     print( "Welcome to SOUFFLE Programming Language" );
+}
+
+void resetInteger( int x ){
+     x <- 0;
+}
+
+int calculate( int a, int b ){
+    int result;
+    result <- (a * b) + (a - b);
+    return -5;
+}
+
+double foo(){
+    return -315.35;
+}
+
+bool isBiggerThan10 ( int num){
+    bool result; 
+    if( num > -10 ){
+    	if (num != true){
+	   result <- lol;
+	}
+        else {
+           until (num < -10)
+           {
+		int i <- 0;
+                until (i != 10){
+		      i++;
+		}
+		num--;	
+      	   }
+	}
+    }
+    else {
+    	result <- lol;
+    }
+    return result;
+}
+
+string changeString (string p_str) {
+    bool flag <- isBiggerThan10(calculate(10,20)+5);
+    if (flag == true)
+        p_str <- "";
+    else
+       p_str <- "Goodbye";
+    return p_str;
+}
+
+
+go {
+
+   # TEST DECLARATION
+
+   string str1;
+   int num1;
+   double num2;
+   bool isFinish;
+   url urlAdress;
+
+
+   # TEST ASSIGMENT STATEMENTS
+
+   str1 <- "New String !";
+   num1 <- 5;
+   num2 <- 12.7;
+   isFinish <- false;
+   urlAdress <- http://www.cs.bilkent.edu.tr/~guvenir/courses/CS315/;
+
+   string message <- "Welcome!";
+   int val <- 16;
+   double val2 <- 45.86;
+   bool isConnect <- true;
+   url adress <- http://www.cs.bilkent.edu.tr/;
+
+
+   # TEST INPUT - OUTPUT STATEMENTS
+
+   int a;
+   scan(a);
+   a <- a * 5;   
+   print(b);
+
+   string b;
+   scan(b);
+   print(b);
+
+   double c;
+   scan(c);
+   print( c );
+   
+   bool isOkey;
+   scan( isOkey );
+   print( isOkey );
+
+   url connectAdress;
+   scan( connectAdress );
+   print( connectAdress );
+
+   print( 4 + 2 * 5 - 9 );
+   print( "SOUFFLE" );
+   print( 34.58 );
+   print( false );
+   print( http://www.cs.bilkent.edu.tr/ );
+
+
+   # TEST ARITHMETIC OPERATIONS
+
+   int a <-  20;
+   int b <-  5;
+   int myInt;
+
+   myInt <- a * b;
+   myInt <- a + b;
+   myInt <- a - b;
+   myInt <- a / b;
+   myInt <- a % b;
+   myInt <- (( a + 5 ) - 4 * (6 / b)) % 10;  
+   
+   double c <- 10.5;
+   double d <- 2.1;
+   double myDouble;
+
+   myDouble <- c * d;
+   myDouble <- c + d;
+   myDouble <- c / d;
+   myDouble <- c - d;
+   myDouble <- c % d;
+   myDouble <-  c + 7.5 - 9 * (d % 2) / 3.8;
+
+
+   # TEST CONDITIONAL AND IF STATEMENTS
+   # This part also tests & (AND) and | (OR) symbols.
+
+   int a <- 2;
+   int b <- 5;
+
+   if ( a == b) {
+      print( "a is equal to b!" );
+   }
+   else {
+      print( "a is NOT equal to b!" );
+   }   
+
+   if( a > 0 | a < b | a <= 7 ){
+      a <- b;
+   }
+   else {
+      a ++;
+   }
+   
+   if( a >= b & b != 5 ){
+      b <- 5;
+   }
+   else {
+      b --;
+   }   
+   
+
+   
+   # TEST FOR LOOP
+   
+   loop int i from 15 to 4 by -1
+   {
+	print("CS315");
+   }
+
+   loop int j from 5 to 36 by *2
+   {
+	print( j );
+   }
+
+   int x <- 1;
+   loop int i from 0 to 10 by +1
+   {
+	x <- x * 2;
+   }
+   
+   int y <- 54;
+   loop int i from 1 to 156 by /6 {
+        if( y >= 10 ){
+	    y <- y - 10;
+	}
+	else {
+	    y <- y + 25;
+	}
+   }
+
+   # TEST WHILE LOOP
+
+   int a <- 20;
+   int b <- 13;
+   int counter <- 1;
+
+   until ( a >= b)
+   {
+	print(counter);
+	counter <- counter + 1;
+	a <- a - 1;
+   }
+
+   if ( 3 < 5 ){
+      int count <- 12;
+      until ( count > 0)
+      {
+ 	  print( count );
+          count --;
+      }
+   }
+   else {
+      print( 0 );
+   }
+
+
+   # TEST FUNCTION CALL
+
+   welcomeFunction();
+
+   int val <- 5437;
+   resetInteger( val );
+
+   int num1 <- 8;
+   int num2 <- 17;
+   int resultNum <- calculate( num1, num2);
+
+   double newDouble;
+   newDouble <- ( foo() + 2.5) * 16;
+
+   bool temp <- false;
+   temp <- isBiggerThan10( 48 );
+
+   string tempStr <- "abcd";
+   tempStr <- changeString( tempStr);
+
+
+   # TEST PRIMITIVE FUNCTION CALL
+   
+   int temp <- readTemp();   
+   int hum <- readHum();
+   int airPress <- readAirPress();
+   int airQuality <- readAirQuality();
+   int light <- readLight();
+   int soundLevel <- readSoundLevel();
+   
+   url u;
+   u <- http://www.google.com;
+   conn c1 <- connect(u);
+   conn c2 <- connect( http://www.cs.bilkent.edu.tr/ );
+   
+   int a <- 1;
+   send( c1, a);
+   send( c2, 0);
+
+   int result1 <- receive( u );
+   int result2 <- receive( http://www.cs.bilkent.edu.tr/~guvenir/courses/CS315/ );
+      
+   turnOnSwitch(2);
+   turnOffSwitch(5);
+   
+   
+}stop;
